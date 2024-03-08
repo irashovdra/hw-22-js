@@ -4,32 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <!-- Task 1  -->
-    <ul>
-      <ul>
-        <li>Кіт</li>
-        <li>Хом'як</li>
-        <li>Кінь</li>
-        <li>Папуга</li>
-      </ul>
-      <ul>
-        <li>Хліб</li>
-        <li>Петрушка</li>
-        <li>Сир</li>
-      </ul>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Node</li>
-      </ul>
-    </ul>
-    <script type="module" src="./task1.js"></script>
-    <script type="module" src="./task2.js"></script>
-    <script type="module" src="./task3.js"></script>
-    <script type="module" src="./task4.js"></script>
+    <button class="button" data-action="open-modal">Відкрити модалку</button>
+    <div class="backdrop js-backdrop">
+      <div class="modal">
+        <h2>Modal window</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo facere
+          eum repellendus ullam aut magnam omnis a consequatur eveniet
+          laboriosam quam nam quibusdam rem voluptates nostrum delectus quasi,
+          iste nesciunt. Lorem ipsum dolor sit, amet consectetur adipisicing
+          elit. In adipisci, dicta doloremque totam accusantium cum, et optio
+          officia debitis animi eum. Neque asperiores nobis voluptatem fugit
+          culpa optio maiores veniam. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Quae similique doloribus totam quibusdam alias atque
+          cumque. Harum in cupiditate ex amet natus porro voluptates. Nisi
+          veniam illum iusto accusantium architecto?
+        </p>
+        <button class="button" type="button" data-action="close-modal">
+          Закрити
+        </button>
+      </div>
+    </div>
+
+    <!-- Task 3 -->
+
+    <form>
+      <p>Choose a color:</p>
+      <label>
+        <input type="ratio" name="color" value="red" checked />
+        Red
+      </label>
+      <label>
+        <input type="ratio" name="color" value="white" checked />
+        White
+      </label>
+      <label>
+        <input type="ratio" name="color" value="green" checked />
+        Green
+      </label>
+    </form>
+
+    <script type="module" src="./home-work.js"></script>
   </body>
 </html>
