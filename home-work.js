@@ -16,9 +16,42 @@ backdrop.addEventListener("click", function (event) {
   }
 });
 
-const radioButtons = document.querySelectorAll('input[name="color"]');
-radioButtons.forEach((button) => {
-  button.addEventListener("change", function () {
-    document.body.style.backgroundColor = this.value;
-  });
+// Task 3
+
+document.getElementById("name-input").addEventListener("input", function () {
+  const inputValue = this.value;
+  const nameOutput = document.getElementById("name-output");
+
+  if (inputValue === "") {
+    nameOutput.textContent = "незнайомець";
+  } else {
+    nameOutput.textContent = inputValue;
+  }
 });
+
+// Task 4
+
+document
+  .getElementById("validation-input")
+  .addEventListener("blur", function () {
+    const inputValue = this.value;
+    const dataLength = parseInt(this.getAttribute("data-length"));
+    const inputBorder = this.classList;
+
+    if (inputValue.length === dataLength) {
+      inputBorder.remove("invalid");
+      inputBorder.add("valid");
+    } else {
+      inputBorder.remove("valid");
+      inputBorder.add("invalid");
+    }
+  });
+
+// Task 5
+
+document
+  .getElementById("font-size-control")
+  .addEventListener("input", function () {
+    const fontSize = this.value + "px";
+    document.getElementById("text").style.fontSize = fontSize;
+  });
