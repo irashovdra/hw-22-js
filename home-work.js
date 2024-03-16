@@ -18,6 +18,19 @@ backdrop.addEventListener("click", function (event) {
 
 // Task 3
 
+const colorForm = document.getElementById("colorForm");
+const radios = document.querySelectorAll('input[type="radio"][name="color"]');
+
+function changeBackgroundColor(event) {
+  document.body.style.backgroundColor = event.target.value;
+}
+
+for (const radio of radios) {
+  radio.addEventListener("change", changeBackgroundColor);
+}
+
+// Task 4
+
 document.getElementById("name-input").addEventListener("input", function () {
   const inputValue = this.value;
   const nameOutput = document.getElementById("name-output");
